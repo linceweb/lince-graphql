@@ -1,0 +1,23 @@
+{
+    "name": "lince/graphql",
+    "type": "library",
+    "description": "Construtor de queries GraphQL",
+    "autoload": {
+        "psr-4": {
+            "Lince\\GraphQL\\": "GraphQL/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lince Web",
+            "email": "suporte@linceweb.com.br"
+        }
+    ],
+    "require": {
+        "webonyx/graphql-php": "^0.11|^0.12|^0.13"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4"
+    }
+}
