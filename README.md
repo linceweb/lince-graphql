@@ -1,5 +1,5 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fnash/graphql-qb/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fnash/graphql-qb/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/fnash/graphql-qb/badges/build.png?b=master)](https://scrutinizer-ci.com/g/fnash/graphql-qb/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/linceweb/graphql-qb/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/linceweb/graphql-qb/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/linceweb/graphql-qb/badges/build.png?b=master)](https://scrutinizer-ci.com/g/linceweb/graphql-qb/build-status/master)
 
 # graphql-qb
 A php GraphQL Query Builder. Nice API. Readable queries. Examples in Unit Tests.
@@ -23,7 +23,7 @@ TODO:
 
 include_once 'vendor/autoload.php';
 
-use Fnash\GraphQL\Query;
+use Linceweb\GraphQL\Query;
 
 $query = Query::create('article')
     ->variables([

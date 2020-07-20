@@ -1,6 +1,6 @@
 <?php
 
-namespace Fnash\GraphQL;
+namespace Linceweb\GraphQL;
 
 final class Fragment
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Fnash\GraphQL;
+namespace Tests\Linceweb\GraphQL;
 
-use Fnash\GraphQL\Mutation;
+use Linceweb\GraphQL\Mutation;
 use PHPUnit\Framework\TestCase;
 
 class MutationTest extends TestCase
