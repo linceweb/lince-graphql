@@ -20,7 +20,7 @@ TODO:
 
 include_once 'vendor/autoload.php';
 
-use Linceweb\GraphQL\Query;
+use Lince\GraphQL\Query;
 
 $query = Query::create('article')
     ->variables([

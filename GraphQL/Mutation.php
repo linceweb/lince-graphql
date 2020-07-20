@@ -1,6 +1,6 @@
 <?php
 
-namespace Linceweb\GraphQL;
+namespace Lince\GraphQL;
 
 final class Mutation
 {

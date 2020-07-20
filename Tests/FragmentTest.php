@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Linceweb\GraphQL;
+namespace Tests\Lince\GraphQL;
 
-use Linceweb\GraphQL\Fragment;
-use Linceweb\GraphQL\Query;
+use Lince\GraphQL\Fragment;
+use Lince\GraphQL\Query;
 use PHPUnit\Framework\TestCase;
 
 class FragmentTest extends TestCase
