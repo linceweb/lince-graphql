@@ -149,7 +149,7 @@ trait QueryTrait
      *
      * @return string
      */
-    private static function printArgs(array $value, $internal = false): string
+    private static function printArgs(array $value, $array = false): string
     {
         if (!count($value)) {
             return '';
@@ -169,11 +169,15 @@ trait QueryTrait
                 $argValue = self::printArgs($argValue, true);
             }
 
-            $args[] = sprintf('%s: %s', $argName, $argValue);
+            if (is_numeric($argName)){
+                $args[] = sprintf('%s', $argValue);
+            } else {
+                $args[] = sprintf('%s: %s', $argName, $argValue);
+            }
         }
 
-        if ($internal){
-            return sprintf('{%s}', implode(', ', $args));
+        if ($array){
+            return sprintf('[%s]', implode(', ', $args));
         }
         return sprintf('(%s)', implode(', ', $args));
     }
@@ -306,7 +310,11 @@ trait QueryTrait
         if ($this->isRootQuery) {
             $query = sprintf('%s { %s %s { %s } } %s', static::printQuery($this->operationName, $this->variables), static::printType($this->type), static::printArgs($this->args), static::printFields($this->fields, $this->skipIf, $this->includeIf), static::printFragments($this->fragments));
         } else {
-            $query = sprintf('%s { %s }', static::printType($this->type), static::printFields($this->fields, $this->skipIf, $this->includeIf));
+            if ($this->type !== null){
+                $query = sprintf('%s { %s }', static::printType($this->type), static::printFields($this->fields, $this->skipIf, $this->includeIf));
+            } else {
+                $query = sprintf('{ %s }', static::printFields($this->fields, $this->skipIf, $this->includeIf));
+            }
         }
 
         $query = \GraphQL\Language\Printer::doPrint(\GraphQL\Language\Parser::parse((string) $query));
